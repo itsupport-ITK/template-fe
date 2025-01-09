@@ -1,0 +1,1 @@
+<h3 {{ $attributes->merge(['class' => 'fw-bold']) }}>{{ $text }}</h3>

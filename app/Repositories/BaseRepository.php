@@ -8,24 +8,14 @@ class BaseRepository{
 
     protected $client;
 
-
     /**
- * BaseRepository constructor.
- * 
- * @param ApiService $client
- */
-    public function __construct(ApiService $client)
-    {
-        $this->client = $client;
-    }
-
-    /**
-     * Get the API client instance.
-     * 
-     * @return ApiService
+     * client API getter
+     * @param  string  $type
      */
-    public function client()
+    public function client(string $type = ApiTypeEnum::MAIN)
     {
+        $this->client = new ApiService($type);
+
         return $this->client;
     }
 

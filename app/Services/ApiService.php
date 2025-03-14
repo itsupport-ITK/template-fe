@@ -3,7 +3,7 @@
 namespace App\Services;
 
 use App\Enums\ApiTypeEnum;
-use App\Repositories\Auth\AuthRepository;
+use App\Repositories\AuthRepository\AuthRepository;
 use Illuminate\Http\Client\Response as ClientResponse;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Http;

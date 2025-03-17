@@ -12,19 +12,6 @@ abstract class Controller
 {
     use AuthorizesRequests, ValidatesRequests;
 
-    public $client;
-
-    /**
-     * client API getter
-     * @param  string  $type
-     */
-    public function client(string $type = 'main')
-    {
-        $this->client = new ApiService($type);
-
-        return $this->client;
-    }
-
     /**
      * return back with error, custom message and custom error key
      * @param  string $message

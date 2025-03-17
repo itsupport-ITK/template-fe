@@ -12,9 +12,9 @@ class BaseRepository{
      * client API getter
      * @param  string  $type
      */
-    public function client(string $type = ApiTypeEnum::MAIN)
+    public function client()
     {
-        $this->client = new ApiService($type);
+        $this->client = new ApiService();
 
         return $this->client;
     }

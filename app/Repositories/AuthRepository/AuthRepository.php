@@ -11,7 +11,7 @@ class AuthRepository extends BaseRepository
      * 
      * @return array|string
      */
-    public function getToken(?string $type = null) : array|string|null{
+    public function getToken(?string $type = null) :?string{
         
         $token = [
             'token' => session('token'),
@@ -23,6 +23,6 @@ class AuthRepository extends BaseRepository
             return isset($token[$type]) ? $token[$type] : null;
         }
 
-        return $token;
+        return $token['token'];
     }
 }
